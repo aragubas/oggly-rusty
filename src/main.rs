@@ -58,8 +58,6 @@ fn file_exists(path: &String) -> Result<(), String> {
 
 
 fn main() -> Result<(), String> {
-    //do_play(String::from("C:\\Users\\Ceira\\Music\\Over the Horizon 2012.mp3"));
-
     if std::env::args().count() == 1 {
         // Print help, invalid argument count
         print_help();
