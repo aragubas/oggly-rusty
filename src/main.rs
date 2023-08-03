@@ -82,9 +82,8 @@ fn main() -> Result<(), String> {
 
         // Check if audio file exists and if the argument is a file
         // and not a path
-        let path = Path::new(&argument);
         match file_exists(&argument) {
-            Ok(metadata) => { }
+            Ok(_) => { }
             Err(err) => { return Err(err); }
         };
 
@@ -158,9 +157,8 @@ fn main() -> Result<(), String> {
     }
 
     // Check if input file exists
-    let path = Path::new(&file_path);
     match file_exists(&file_path) {
-        Ok(metadata) => { }
+        Ok(_) => { }
         Err(err) => { return Err(err); }
     };
 
