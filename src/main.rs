@@ -122,6 +122,10 @@ fn main() -> Result<(), String> {
                 }
             };
 
+            if speed <= 0.0 {
+                return Err(String::from("Speed cannot be less than or equal to 0"));
+            }
+
             next_is_speed = false;
             continue;
         }
