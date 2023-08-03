@@ -1,6 +1,6 @@
 use rodio::{Decoder, OutputStream, Sink};
 use std::fs;
-use std::io::{BufReader, Error};
+use std::io::BufReader;
 use std::{fs::File, path::Path};
 
 fn print_help() {
@@ -45,7 +45,7 @@ fn file_exists(path: &String) -> Result<(), String> {
                 return Err(error_message);
             }
         }
-        Err(error) => {
+        Err(_) => {
             let mut error_message = String::from("Could not open ");
             error_message.push_str(path);
 
