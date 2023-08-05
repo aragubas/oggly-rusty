@@ -58,6 +58,8 @@ fn file_exists(path: &String) -> Result<(), String> {
 
 
 fn main() -> Result<(), String> {
+    // TODO: Increase thread priority to "Above Normal" to avoid
+    // overruns    
     if std::env::args().count() == 1 {
         // Print help, invalid argument count
         print_help();
